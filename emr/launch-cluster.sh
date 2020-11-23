@@ -16,7 +16,7 @@ aws emr create-cluster \
 
 
 
-# aws s3 cp dist/emr_spark_tutorial-1.0.0-py3.8.egg s3://rb-deleteme2/
+# aws s3 cp dist/emr_pyspark_docker_tutorial-1.0.0-py3.8.egg s3://rb-deleteme2/
 # aws s3 cp src/my_spark_app/index.py s3://rb-deleteme2/
 # docker build --rm -f Dockerfile.custom -t emr-spark-tutorial .
 # docker tag emr-spark-tutorial:latest 617090640476.dkr.ecr.us-east-1.amazonaws.com/emr-spark-tutorial:latest

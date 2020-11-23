@@ -1,5 +1,5 @@
 {
-  "name": "emr-spark-tutorial",
+  "name": "emr-pyspark-docker-tutorial",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

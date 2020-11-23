@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='emr_spark_tutorial',
+    name='emr_pyspark_docker_tutorial',
     version='1.0.0',
     author='Ludovico Fabbri',
     author_email='ludovico.fabbri@gmail.com',
@@ -20,5 +20,5 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.6',
+    python_requires='>=3.8',
 )

@@ -9,7 +9,7 @@
       "--master",
       "yarn",
       "--py-files",
-      "s3://rb-deleteme2/emr_spark_tutorial-1.0.0-py3.8.egg",
+      "s3://rb-deleteme2/emr_pyspark_docker_tutorial-1.0.0-py3.8.egg",
       "s3://rb-deleteme2/index.py"
     ]
   },

@@ -1,4 +1,4 @@
-# import boto3
+import boto3  # Not used, just to verify dependency is there
 from pyspark.sql import SparkSession
 from pyspark.sql.types import *
 from pyspark.sql.functions import *
@@ -24,12 +24,6 @@ def main():
 		StructField('recovered', IntegerType(), True),
 		StructField('deaths', IntegerType(), True)
 	])
-
-	# # For no particular reason, we are going to list file objects in the S3 bucket (just to test boto3 dependency is working)
-	# client = boto3.client('s3')
-	# print('We are going to load data from the following files:')
-	# for o in client.list_objects(Bucket='covid19-lake', Prefix='enigma-jhu/json')['Contents']:
-	# 	print('\t' + o['Key'])
 
 	# Load data from S3
 	df = spark.read.json(path=f'{Config.READ_PROTOCOL}://covid19-lake/enigma-jhu/json/*', schema=json_schema)
