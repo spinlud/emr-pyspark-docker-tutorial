@@ -1,0 +1,28 @@
+[
+  {
+    "Type": "spark",
+    "Name": "Spark step",
+    "ActionOnFailure": "TERMINATE_CLUSTER",
+    "Args": [
+      "--deploy-mode",
+      "cluster",
+      "--master",
+      "yarn",
+      "--py-files",
+      "s3://rb-deleteme2/emr_spark_tutorial-1.0.0-py3.8.egg",
+      "s3://rb-deleteme2/index.py"
+    ]
+  },
+  {
+    "Type": "CUSTOM_JAR",
+    "Name": "S3DistCp step",
+    "ActionOnFailure": "TERMINATE_CLUSTER",
+    "Jar": "command-runner.jar",
+    "Args": [
+      "s3-dist-cp",
+      "--s3Endpoint=s3.amazonaws.com",
+      "--src=hdfs:///output",
+      "--dest=s3://rb-deleteme2/reports/"
+    ]
+  }
+]

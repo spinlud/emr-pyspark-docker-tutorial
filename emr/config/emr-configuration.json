@@ -1,0 +1,69 @@
+[
+   {
+      "Classification": "container-executor",
+      "Properties": {},
+      "Configurations": [
+         {
+            "Classification": "docker",
+            "Properties": {
+               "docker.privileged-containers.registries": "local,centos,617090640476.dkr.ecr.us-east-1.amazonaws.com",
+               "docker.trusted.registries": "local,centos,617090640476.dkr.ecr.us-east-1.amazonaws.com"
+            }
+         }
+      ]
+   },
+   {
+      "Classification": "hive-site",
+      "Properties": {
+         "hive.execution.mode": "container"
+      }
+   },
+   {
+      "Classification": "yarn-site",
+      "Properties": {
+         "yarn.nodemanager.vmem-check-enabled": "false",
+         "yarn.nodemanager.pmem-check-enabled": "false"
+      }
+   },
+   {
+      "Classification": "spark",
+      "Properties": {
+         "maximizeResourceAllocation": "false"
+      }
+   },
+   {
+      "Classification": "spark-defaults",
+      "Properties": {
+         "spark.dynamicAllocation.enabled": "true",
+         "spark.shuffle.service.enabled": "true",
+         "spark.executor.instances": "5",
+         "spark.dynamicAllocation.initialExecutors": "5",
+         "spark.dynamicAllocation.minExecutors": "5",
+         "spark.rdd.compress": "true",
+         "spark.shuffle.compress": "true",
+         "spark.shuffle.spill.compress": "true",
+         "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+         "spark.executorEnv.YARN_CONTAINER_RUNTIME_TYPE": "docker",
+         "spark.yarn.am.waitTime": "300s",
+         "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_TYPE": "docker",
+         "spark.executorEnv.YARN_CONTAINER_RUNTIME_DOCKER_CLIENT_CONFIG": "hdfs:///user/hadoop/config.json",
+         "spark.executorEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "617090640476.dkr.ecr.us-east-1.amazonaws.com/spark-emr-test:custom",
+         "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_DOCKER_CLIENT_CONFIG": "hdfs:///user/hadoop/config.json",
+         "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "617090640476.dkr.ecr.us-east-1.amazonaws.com/spark-emr-test:custom",
+         "spark.yarn.appMasterEnv.JAVA_HOME": "/usr/local/openjdk-8",
+         "spark.yarn.executorEnv.JAVA_HOME": "/usr/local/openjdk-8"
+      }
+   },
+   {
+      "Classification": "spark-env",
+      "Configurations": [
+         {
+            "Classification": "export",
+            "Properties": {
+               "PYSPARK_PYTHON": "/usr/local/bin/python3",
+               "PYSPARK_DRIVER_PYTHON": "/usr/local/bin/python3"
+            }
+         }
+      ]
+   }
+]

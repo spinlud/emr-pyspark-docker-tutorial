@@ -1,0 +1,45 @@
+[
+  {
+    "InstanceCount": 1,
+    "Name": "MyMasterIG",
+    "InstanceGroupType": "MASTER",
+    "InstanceType": "r5.xlarge"
+  },
+  {
+    "InstanceCount": 1,
+    "Name": "MyCoreIG",
+    "InstanceGroupType": "CORE",
+    "InstanceType": "r5.xlarge",
+    "AutoScalingPolicy": {
+      "Constraints": {
+        "MinCapacity": 1,
+        "MaxCapacity": 3
+      },
+      "Rules": [
+        {
+          "Name": "Yarn-memory-scale-out",
+          "Description": "Yarn memory scale out rule",
+          "Action": {
+            "SimpleScalingPolicyConfiguration": {
+              "AdjustmentType": "CHANGE_IN_CAPACITY",
+              "ScalingAdjustment": 2,
+              "CoolDown": 300
+            }
+          },
+          "Trigger": {
+            "CloudWatchAlarmDefinition": {
+              "ComparisonOperator": "LESS_THAN",
+              "EvaluationPeriods": 1,
+              "MetricName": "YARNMemoryAvailablePercentage",
+              "Namespace": "AWS/ElasticMapReduce",
+              "Period": 300,
+              "Threshold": 30,
+              "Statistic": "AVERAGE",
+              "Unit": "PERCENT"
+            }
+          }
+        }
+      ]
+    }
+  }
+]

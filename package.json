@@ -1,0 +1,22 @@
+{
+  "name": "emr-spark-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -fr build && rm -fr dist && rm -fr **/*.egg-info && rm -fr **/__pycache__ && rm -fr **/.pytest_cache",
+    "package": "npm run clean && python setup.py bdist_egg",
+    "launch-cluster": "npm run package && ./emr/launch-cluster.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://spinlud@github.com/spinlud/emr-spark-tutorial.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spinlud/emr-spark-tutorial/issues"
+  },
+  "homepage": "https://github.com/spinlud/emr-spark-tutorial#readme"
+}
