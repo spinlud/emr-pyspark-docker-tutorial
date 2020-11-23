@@ -46,9 +46,7 @@
          "spark.executorEnv.YARN_CONTAINER_RUNTIME_TYPE": "docker",
          "spark.yarn.am.waitTime": "300s",
          "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_TYPE": "docker",
-         "spark.executorEnv.YARN_CONTAINER_RUNTIME_DOCKER_CLIENT_CONFIG": "hdfs:///user/hadoop/config.json",
          "spark.executorEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "617090640476.dkr.ecr.us-east-1.amazonaws.com/emr-pyspark-docker-tutorial:latest",
-         "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_DOCKER_CLIENT_CONFIG": "hdfs:///user/hadoop/config.json",
          "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "617090640476.dkr.ecr.us-east-1.amazonaws.com/emr-pyspark-docker-tutorial:latest",
          "spark.yarn.appMasterEnv.JAVA_HOME": "/usr/local/openjdk-8",
          "spark.yarn.executorEnv.JAVA_HOME": "/usr/local/openjdk-8"
