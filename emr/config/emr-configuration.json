@@ -36,6 +36,8 @@
       "Properties": {
          "spark.dynamicAllocation.enabled": "true",
          "spark.shuffle.service.enabled": "true",
+         "spark.driver.cores": "1",
+         "spark.executor.cores": "1",
          "spark.executor.instances": "3",
          "spark.dynamicAllocation.initialExecutors": "3",
          "spark.dynamicAllocation.minExecutors": "3",
