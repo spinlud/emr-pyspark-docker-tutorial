@@ -5,7 +5,7 @@ setup(
     version='1.0.0',
     author='Ludovico Fabbri',
     author_email='ludovico.fabbri@gmail.com',
-    description='EMR Spark tutorial source code',
+    description='EMR PySpark Docker tutorial',
     url='https://github.com/spinlud/emr-spark-tutorial',
     package_dir={
         '': 'src'

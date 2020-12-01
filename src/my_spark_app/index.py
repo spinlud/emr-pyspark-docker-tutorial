@@ -54,7 +54,9 @@ def main():
 		.show(50, truncate=False)
 
 	# Write csv report for each country_region/province_state
-	latest_data.write \
+	latest_data \
+		.repartition(1, ['country_region', 'province_state']) \
+		.write \
 		.partitionBy(['country_region', 'province_state']) \
 		.mode('overwrite') \
 		.csv(path=f'{Config.WRITE_PROTOCOL}:///output', sep=',', header=True)

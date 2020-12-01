@@ -6,8 +6,8 @@
          {
             "Classification": "docker",
             "Properties": {
-               "docker.privileged-containers.registries": "local,centos,617090640476.dkr.ecr.us-east-1.amazonaws.com",
-               "docker.trusted.registries": "local,centos,617090640476.dkr.ecr.us-east-1.amazonaws.com"
+               "docker.privileged-containers.registries": "local,centos,621329850245.dkr.ecr.us-east-1.amazonaws.com",
+               "docker.trusted.registries": "local,centos,621329850245.dkr.ecr.us-east-1.amazonaws.com"
             }
          }
       ]
@@ -38,9 +38,11 @@
          "spark.shuffle.service.enabled": "true",
          "spark.driver.cores": "1",
          "spark.executor.cores": "1",
-         "spark.executor.instances": "3",
-         "spark.dynamicAllocation.initialExecutors": "3",
-         "spark.dynamicAllocation.minExecutors": "3",
+         "spark.driver.memory": "512m",
+         "spark.executor.memory": "512m",
+         "spark.executor.instances": "1",
+         "spark.dynamicAllocation.initialExecutors": "1",
+         "spark.dynamicAllocation.minExecutors": "1",
          "spark.rdd.compress": "true",
          "spark.shuffle.compress": "true",
          "spark.shuffle.spill.compress": "true",
@@ -48,8 +50,8 @@
          "spark.executorEnv.YARN_CONTAINER_RUNTIME_TYPE": "docker",
          "spark.yarn.am.waitTime": "300s",
          "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_TYPE": "docker",
-         "spark.executorEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "617090640476.dkr.ecr.us-east-1.amazonaws.com/emr-pyspark-docker-tutorial:latest",
-         "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "617090640476.dkr.ecr.us-east-1.amazonaws.com/emr-pyspark-docker-tutorial:latest",
+         "spark.executorEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "621329850245.dkr.ecr.us-east-1.amazonaws.com/emr-pyspark-docker-tutorial:latest",
+         "spark.yarn.appMasterEnv.YARN_CONTAINER_RUNTIME_DOCKER_IMAGE": "621329850245.dkr.ecr.us-east-1.amazonaws.com/emr-pyspark-docker-tutorial:latest",
          "spark.yarn.appMasterEnv.JAVA_HOME": "/usr/local/openjdk-8",
          "spark.yarn.executorEnv.JAVA_HOME": "/usr/local/openjdk-8"
       }

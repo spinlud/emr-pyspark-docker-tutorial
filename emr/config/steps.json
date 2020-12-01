@@ -9,8 +9,8 @@
       "--master",
       "yarn",
       "--py-files",
-      "s3://rb-deleteme2/emr_pyspark_docker_tutorial-1.0.0-py3.8.egg",
-      "s3://rb-deleteme2/index.py"
+      "s3://emr-pyspark-docker-tutorial-bucket/emr_pyspark_docker_tutorial-1.0.0-py3.8.egg",
+      "s3://emr-pyspark-docker-tutorial-bucket/index.py"
     ]
   },
   {
@@ -22,7 +22,7 @@
       "s3-dist-cp",
       "--s3Endpoint=s3.amazonaws.com",
       "--src=hdfs:///output",
-      "--dest=s3://rb-deleteme2/reports/"
+      "--dest=s3://emr-pyspark-docker-tutorial-bucket/reports/"
     ]
   }
 ]

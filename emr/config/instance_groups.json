@@ -3,13 +3,13 @@
     "InstanceCount": 1,
     "Name": "MyMasterIG",
     "InstanceGroupType": "MASTER",
-    "InstanceType": "r5.xlarge"
+    "InstanceType": "m4.large"
   },
   {
     "InstanceCount": 1,
     "Name": "MyCoreIG",
     "InstanceGroupType": "CORE",
-    "InstanceType": "r5.xlarge",
+    "InstanceType": "m4.large",
     "AutoScalingPolicy": {
       "Constraints": {
         "MinCapacity": 1,

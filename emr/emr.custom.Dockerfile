@@ -29,7 +29,8 @@ RUN ln -s /usr/local/bin/pip"$PYTHON_MIN_VERSION" /usr/local/bin/pip3 && pip3 -V
 RUN ln -s /usr/local/bin/python"$PYTHON_MIN_VERSION" /usr/local/bin/python3 && python3 -V
 
 RUN pip3 install --upgrade pip \
-	&& pip3 install boto3
+	&& pip3 install boto3 \
+	&& python3 -c "import boto3"
 
 ENV PYSPARK_DRIVER_PYTHON python3
 ENV PYSPARK_PYTHON python3

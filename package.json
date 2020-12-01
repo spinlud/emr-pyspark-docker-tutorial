@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://spinlud@github.com/spinlud/emr-spark-tutorial.git"
+    "url": "git+https://github.com/spinlud/emr-pyspark-docker-tutorial.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spinlud/emr-spark-tutorial/issues"
+    "url": "https://github.com/spinlud/emr-pyspark-docker-tutorial/issues"
   },
-  "homepage": "https://github.com/spinlud/emr-spark-tutorial#readme"
+  "homepage": "https://github.com/spinlud/emr-pyspark-docker-tutorial#readme"
 }
