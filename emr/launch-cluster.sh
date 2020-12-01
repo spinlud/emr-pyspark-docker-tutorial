@@ -9,7 +9,7 @@ aws emr create-cluster \
 --log-uri s3://emr-pyspark-docker-tutorial-bucket/logs \
 --instance-groups file://$EMR_DIR/config/instance_groups.json \
 --auto-scaling-role EMR_AutoScaling_DefaultRole \
---configurations file://$EMR_DIR/config/emr-configurations.json \
+--configurations file://$EMR_DIR/config/services.json \
 --steps file://$EMR_DIR/config/steps.json \
 --auto-terminate \
 --enable-debugging \
